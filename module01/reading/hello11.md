@@ -94,3 +94,84 @@ public class UseThree {
   }
 }
 ```
+
+## Web Exercises
+
+1. Write a program `HelloWorldMultilingual.java` that prints `Hello World!` in as many human languages as you can.
+```java
+public class HelloWorldMultilingual {
+  public static void main(String[] args) {
+    System.out.println("Hello, World!");
+    System.out.println("Olá, Mundo!");
+  }
+}
+```
+
+2. Write a program `Initials.java` that prints your initials using nine rows of asterisks like the one below
+
+```
+**        ***    **********      **             *             **
+**      ***      **        **     **           ***           **
+**    ***        **         **     **         ** **         **
+**  ***          **          **     **       **   **       **
+*****            **          **      **     **     **     **
+**  ***          **          **       **   **       **   **
+**    ***        **         **         ** **         ** **
+**      ***      **        **           ***           ***
+**        ***    **********              *             *
+```
+```java
+public class Initials {
+    public static void main(String[] args) {
+        // TO
+        System.out.println("*********  ****************");
+        System.out.println("*********  ****************");
+        System.out.println("   ***     ***          ***");
+        System.out.println("   ***     ***          ***");
+        System.out.println("   ***     ***          ***");
+        System.out.println("   ***     ***          ***");
+        System.out.println("   ***     ***          ***");
+        System.out.println("   ***     ***          ***");
+        System.out.println("   ***     ****************");
+        System.out.println("   ***     ****************");
+    }
+}
+```
+
+3. Describe what happens if, in `HelloWorld.java`, you omit
+    - `main`
+       - Compiler Error: Missing method `identifier`
+    - `String`
+       - It compiles but it does not run properly: Method signature was different than expected by the JVM
+    - `HelloWorld`
+      - Same as `main`.
+    - `System.out`
+      - Compiler error: `println` is not defined in this class.
+    - `println`
+      - Compiler error: my coding does not make any sense now.
+4. Describe what happens if, in `HelloWorld.java`, you omit  
+
+   - the ;
+   - the first "
+   - the second "
+   - the first {
+   - the second {
+   - the first }
+   - the second }
+
+5. Describe what happens if, in `HelloWorld.java`, you misspell (by, say, omitting the second letter)
+    - main
+    - String
+    - HelloWorld
+    - System.out
+    - println
+
+6. I typed in the following program. It compiles fine, but when I execute it, I get the error `java.lang.NoSuchMethodError: main`. What am I doing wrong?
+```java
+public class Hello {
+   public static void main(/*;)*/) {
+      System.out.println("Doesn't execute");   
+   }
+}
+```
+> **Answer:** you forgot the `String[] args`. It is **required**. 
